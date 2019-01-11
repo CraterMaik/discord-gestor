@@ -4,6 +4,7 @@ const base = new sqlite3.Database('./dgestor.db');
 
 function isInt(n) {
 	return Number(n) === n && n % 1 === 0;
+	
 }
 
 exports.verPerfil = function (idusuario, cb) {
