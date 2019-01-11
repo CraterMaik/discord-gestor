@@ -1,0 +1,28 @@
+{
+	"name": "discord-gestor",
+	"version": "1.0.8",
+	"description": "discord gestor es un modulo para gestionar y administrar datos de sqlite a través de metodos funcionales",
+	"main": "./index.js",
+	"keywords": [
+		"discord",
+		"discord db",
+		"db discord",
+		"level discord",
+		"sqlite discord",
+		"discord economia",
+		"economia discord",
+		"sqlite3 discord",
+		"bot level",
+		"discord xp",
+		"xp discord",
+		"discord base",
+		"discord data"
+	],
+	"author": "CraterMaik",
+	"license": "MIT",
+	"homepage": "https://github.com/CraterMaik/discord-gestor",
+	"dependencies": {
+		"sqlite3": "4.0.4",
+		"chalk": "2.4.1"
+	}
+}
