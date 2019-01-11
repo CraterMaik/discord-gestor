@@ -320,6 +320,7 @@ exports.verReputacion = function (idusuario, cb) {
 								}
 								cb(reps);
 							} else {
+								
 								let reps = {
 									'id': filas.idusu,
 									'cantidad': filas.rep,
