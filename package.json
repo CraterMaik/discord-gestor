@@ -1,6 +1,6 @@
 {
 	"name": "discord-gestor",
-	"version": "1.0.8",
+	"version": "1.1.0",
 	"description": "discord gestor es un modulo para gestionar y administrar datos de sqlite a través de metodos funcionales",
 	"main": "./index.js",
 	"keywords": [

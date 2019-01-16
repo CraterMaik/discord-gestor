@@ -16,7 +16,7 @@ $ npm install --save discord-gestor
 + Sistema de niveles.
 + Gestión de tiendas.
 + Gestión de inventarios.
-
++ Gestion de Cooldowns.
 
 ## Documentación
 > [discord-gestor documentación](https://dg.portalmybot.com/)
@@ -25,13 +25,11 @@ $ npm install --save discord-gestor
 
 ## Ejemplo de uso
 
-### .verPerfil()
+### MODULO PERFILES
 ```js
 // Referenciar discord-gestor como dgestor (es opcional, solo para el ejemplo).
 const dgestor = require('discord-gestor');
 ​
-// Usando el modulo perfil
-
 // El parametro (datos) optiene los datos de retorno del
 // usuario solicitado con el id: '123456'.
 dgestor.perfil.verPerfil('123456', (datos) => {
@@ -52,12 +50,10 @@ dgestor.perfil.verPerfil('123456', (datos) => {
 ```
 
 
-### .verMonedas()
+### MODULO ECONOMIA
 ```js
 // Referenciar discord-gestor como dgestor (es opcional, solo para el ejemplo).
 const dgestor = require('discord-gestor');
-
-// Usando el modulo economia
 
 // El parametro (monedas) optiene los datos de retorno del
 // usuario solicitado con el id: '123456'.
@@ -70,6 +66,36 @@ dgestor.economia.verMonedas('123456', (monedas) => {
 //Propiedades de retorno:
 // id 
 // cantidad
+
+// entre otros.. 
+// (Vea todas la propiedades y funciones en la documentación.)
+```
+
+### MODULO UTILIDAD
+```js
+// Referenciar discord-gestor como dgestor (es opcional, solo para el ejemplo).
+const dgestor = require('discord-gestor');
+
+// El parametro (resp) retorna la respuesta como 
+// dato booleano (verdadero) o (false) del
+// usuario con el id: '123456'
+​
+// El parametro (tiempo) retorna los datos del tiempo que resta
+// del cooldown del usuario
+dgestor.utilidad.agregarCooldown('ping', '123456', {minutos: 2}, (resp, tiempo) =>{
+	if (resp) {
+		console.log('SI PUEDE USAR EL COMANDO');
+
+	} else {
+		console.log('NO PUEDE USAR EL COMANDO');
+		console.log('FALTAN: ' + tiempo.horas + ' horas, ' + tiempo.minutos + ' minutos, ' + tiempo.segundos + ' segundos.');
+		
+	}
+})
+//Propiedades de retorno:
+// horas 
+// minutos
+// segundos
 
 // entre otros.. 
 // (Vea todas la propiedades y funciones en la documentación.)
